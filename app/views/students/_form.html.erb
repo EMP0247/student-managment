@@ -1,0 +1,41 @@
+<table colspan = '5px' border = '5px' align = 'center'>
+<%= form_with model: @student do |form| %>
+
+ <tr>
+    <td>
+    <div>
+        <%= form.label :first_name%>
+        <%= form.text_field :first_name%>
+    </div>
+    </td>
+</tr>
+<tr>
+    <td>
+    <div>
+        <%= form.label :last_name%>
+        <%= form.text_field :last_name%>
+    </div>
+    </td>
+</tr>
+<tr>
+    <td>
+    <div>
+        <%= form.label :email%>
+        <%= form.email_field :email%>
+    </div>
+    </td>
+</tr>
+<tr>
+    <td>
+    <div align = 'center'>
+        <%= form.submit%>
+    </div>
+    <td>
+</tr>
+</table>
+<% if @student.errors.any?%>
+    <% @student.errors.full_messages.each do |message| %>
+        <p><% message%></p>
+    <%end%>
+<%end%>
+<%end%>

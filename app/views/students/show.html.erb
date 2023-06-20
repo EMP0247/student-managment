@@ -1,0 +1,28 @@
+<center><marquee width="60%" direction="left" height="50px" bgcolor="cyan" behavior="alternate" scrollamount="15"> 
+Student Description
+</marquee>
+<table border = '5px', align = 'center'>
+<tbody>
+
+<tr>
+<td>
+<p><strong>First Name: </strong><%= @student.first_name%></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Last Name: </strong><%= @student.last_name%></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Email: </strong><%= link_to @student.email%></p>
+</td>
+</tr>
+<tr>
+<td align = 'center'>
+<%= link_to 'Back', students_path%> | <%= link_to 'Edit',edit_student_path(@student)%>
+</td>
+</tr>
+</tbody>
+</table>
